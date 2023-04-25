@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "create-component": "node src/scripts/createComponent.js"
+    "create-component": "node src/scripts/createComponent.js",
+    "create-internal-component": "node src/scripts/createInternalComponent.js"
   },
   "browserslist": [
     ">0.2%",

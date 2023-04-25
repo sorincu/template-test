@@ -14,7 +14,7 @@ const componentDir = path.join(
   __dirname,
   "..",
   "components",
-  "components",
+  "internal-components",
   componentName
 );
 
@@ -22,12 +22,18 @@ if (!fs.existsSync(componentDir)) {
   fs.mkdirSync(componentDir);
 }
 
-ponent.js.ejs",
-},
+const templates = [
+  {
+    name: "About.component.js",
+    template: "About.component.js.ejs",
+  },
   {
     name: `${componentName}.component.js`,
-    mplate: "Component.component.js.ejs",
-
+    template: "Component.component.js.ejs",
+  },
+  {
+    name: `${componentName}.component.tsx`,
+    template: "Component.component.tsx.ejs",
   },
   {
     name: `${componentName}.module.css`,
@@ -46,4 +52,4 @@ templates.forEach((template) => {
   fs.writeFileSync(filePath, fileContent);
 });
 
-console.log(`Component "${componentName}" created successfully.`);
+console.log(`Internal component "${componentName}" created successfully.`);
